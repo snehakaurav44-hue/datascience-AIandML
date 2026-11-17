@@ -1,0 +1,10 @@
+count = 0
+total = 0
+
+for i in range (101,200):
+  if i%7 == 0:
+    count += 1
+    total +=i
+
+    print("num of int divi by 7=",count)
+    print("sum of int =",total)

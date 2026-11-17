@@ -1,0 +1,21 @@
+from sklearn.linear_model import LinearRegression
+from sklearn.metrics import mean_squared_error
+import numpy as np
+amount=np.array([34,108,64,88,99,51])
+amount=amount.reshape(len(amount),1)
+tip=np.array([5,17,11,8,14,5])
+tip=tip.reshape(len(tip),1)
+model=LinearRegression()
+model.fit(amount,tip)
+print(model.intercept_)
+print(model.coef_)
+# k=model.predict([[200]])
+# print(k)
+y_pred=model.predict(amount)
+print(y_pred)
+mse=mean_squared_error(tip,y_pred)
+print(mse)
+
+
+
+
